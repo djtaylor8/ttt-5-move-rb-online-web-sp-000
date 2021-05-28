@@ -7,9 +7,13 @@ require_relative '../lib/move.rb'
 puts "Welcome to Tic Tac Toe!"
 #display empty board
 board = [" ", " ", " ", " ", " ", " ", " ", " ", " "]
-#prompt user for input
+#ask user for input (number)
 puts "Where would you like to go?"
+#store response in the input variable
 input = gets.strip
+#call input to index function, which takes input and converts it #to array index
 index = input_to_index(input)
+#call the move function --> updates the board
 move(board, index, value = "X")
+#display updated board
 display_board(board)
